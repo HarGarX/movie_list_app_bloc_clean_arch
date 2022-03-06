@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:hive/hive.dart';
+
 List<MovieModel> moviesModelFromJson(String str) =>
     List<MovieModel>.from(json.decode(str).map((x) => MovieModel.fromJson(x)));
 
@@ -15,6 +17,7 @@ MovieModel movieModelFromJson(String str) =>
 
 String movieModelToJson(MovieModel data) => json.encode(data.toJson());
 
+@HiveType(typeId: 0)
 class MovieModel {
   MovieModel({
     required this.adult,
