@@ -1,0 +1,3 @@
+class SecureStorageConstants {
+  SecureStorageConstants._();
+}
